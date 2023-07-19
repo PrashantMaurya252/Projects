@@ -1,1 +1,0 @@
-console.log(Heroes.join(Marvel))
