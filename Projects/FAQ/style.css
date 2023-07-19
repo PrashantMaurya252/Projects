@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: url(./images/pexels-tirachard-kumtanom-733857.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.accordion{
+    width: 65%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+.accordion .accordion-title{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.accordion .content-container .question{
+    padding: 10px 0px;
+    font-size: 22px;
+    border-bottom: solid black 1px;
+    position: relative;
+    cursor: pointer;
+}
+.accordion .content-container .question:after{
+    content: '+';
+    position: absolute;
+    right: 5px;
+}
+.accordion .content-container .answer{
+    padding-top:15px ;
+    font-size: 22px;
+    line-height: 1.5;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/* JavaScript Styling */
+.accordion .content-container.active .answer{
+    height: 150PX;
+}
+.accordion .content-container.active .question{
+    font-size: 18px;
+    transition: .5s;
+
+}
+.accordion .content-container.active .question:after{
+    content: '-';
+    font-size: 30px;
+    transition: .5s;
+}

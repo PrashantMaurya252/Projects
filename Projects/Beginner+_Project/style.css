@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: url(./images/pexels-guillaume-hankenne-10121081.jpg) no-repeat center center/cover;
+    position: relative;
+    height: 100vh;
+}
+#open-btn{
+    position: absolute;
+    top:70%;
+    left:10%;
+    width: 350px;
+    height: 80px;
+    font-size: 2rem;
+    color: white;
+    background: transparent;
+    border: white solid 3px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .5s;
+    box-shadow: 0 0 3px black;
+
+}
+
+#open-btn:hover{
+    background-color: black;
+    color: azure;
+}
+
+#modal{
+    background-color: white;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    border-radius: 10px;
+    padding: 10px 40px;
+    font-size: 1.8rem;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: animatemodel;
+    animation-duration: .4s;
+
+}
+#close-btn{
+    font-size: 3rem;
+}
+#close-btn:hover{
+    cursor: pointer;
+    font-size: 3rem;
+    color: red;
+}
+
+#modal-container{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+}
+
+@keyframes animatemodel{
+    from{
+        top: -300px;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+
+}
